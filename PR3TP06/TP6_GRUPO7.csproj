@@ -73,6 +73,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos.cs" />
     <Compile Include="EJ01.aspx.cs">
       <DependentUpon>EJ01.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,6 +88,7 @@
     <Compile Include="EJ02_Inicio.aspx.designer.cs">
       <DependentUpon>EJ02_Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GestionProductos.cs" />
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

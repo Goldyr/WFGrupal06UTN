@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace PR3TP06
+namespace TP6_GRUPO7
 {
     public class Producto
     {
 
         int ID_i;
         string Nombre_s;
-        int IDProveedor_i;
-        int CantidadUnidad_i;
-        int PrecioUnidad_i;
+        string CantidadUnidad_i;
+        decimal PrecioUnidad_i;
 
         public Producto()
         {
         }
 
-        public Producto(int id, string nombre, int idproveedor, int cantidadunidad, int preciounidad)
+        public Producto(int id, string nombre, string cantidadunidad, decimal preciounidad)
         {
             this.ID_i = id;
             this.Nombre_s = nombre;
-            this.IDProveedor_i = idproveedor;
             this.CantidadUnidad_i = cantidadunidad;
             this.PrecioUnidad_i = preciounidad;
         }
@@ -37,17 +35,12 @@ namespace PR3TP06
             set { Nombre_s = value; }
             get { return Nombre_s; }
         }
-        public int IDProveedor
-        {
-            set { IDProveedor_i = value; }
-            get { return IDProveedor_i; }
-        }
-        public int CantidadUnidad
+        public string CantidadUnidad
         {
             set { CantidadUnidad_i = value; }
             get { return CantidadUnidad_i; }
         }
-        public int PrecioUnidad
+        public decimal PrecioUnidad
         {
             set { PrecioUnidad_i = value; }
             get { return PrecioUnidad_i; }

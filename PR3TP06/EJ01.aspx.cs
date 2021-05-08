@@ -13,7 +13,7 @@ namespace TP6_GRUPO7
         {
             if (!IsPostBack)
             {
-                CargarTabla();
+                CargarTabla();              
             }
         }
 

@@ -11,7 +11,7 @@ namespace TP6_GRUPO7
 {
 
 
-    public partial class Inicio
+    public partial class MostrarProductos
     {
 
         /// <summary>
@@ -22,23 +22,5 @@ namespace TP6_GRUPO7
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// Control linkEjercicio1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink linkEjercicio1;
-
-        /// <summary>
-        /// Control linkEjercicio2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink linkEjercicio2;
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TP6_GRUPO7
 {
-    public partial class Inicio : System.Web.UI.Page
+    public partial class MostrarProductos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

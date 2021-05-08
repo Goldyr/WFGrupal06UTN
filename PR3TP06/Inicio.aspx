@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="PR3TP06.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="TP6_GRUPO7.Inicio" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,7 @@
             <asp:HyperLink ID="linkEjercicio1" runat="server" NavigateUrl="EJ01.aspx">Ejercicio1</asp:HyperLink>
         </div>
         <div>
-            <asp:HyperLink ID="linkEjercicio2" runat="server" NavigateUrl="EJ02_Inicio.aspx">Ejercicio2</asp:HyperLink>
+            <asp:HyperLink ID="linkEjercicio2" runat="server" NavigateUrl="~/EJ02_Inicio.aspx">Ejercicio2</asp:HyperLink>
         </div>
     </form>
 </body>

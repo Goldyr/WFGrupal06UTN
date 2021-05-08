@@ -7,6 +7,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 480px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -73,7 +78,8 @@
                 <SortedDescendingHeaderStyle BackColor="#002876" />
             </asp:GridView>
         </div>
-        <p>
+        <p class="auto-style1">
+            <asp:HyperLink ID="hlkInicio" runat="server" NavigateUrl="~/Inicio.aspx">Volver a Inicio</asp:HyperLink>
             </p>
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="#CC0000" />
     </form>

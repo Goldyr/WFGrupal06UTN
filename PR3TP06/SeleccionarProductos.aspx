@@ -47,7 +47,7 @@
             <asp:Label ID="lblProducto" runat="server"></asp:Label>
             <br />
             <br />
-            <asp:HyperLink ID="hlkInicio" runat="server" NavigateUrl="~/Inicio.aspx">Volver a Inicio</asp:HyperLink>
+            <asp:HyperLink ID="hlkInicio" runat="server" NavigateUrl="~/Ej02_Inicio.aspx">Volver a Inicio</asp:HyperLink>
             <br />
             <br />
         </div>

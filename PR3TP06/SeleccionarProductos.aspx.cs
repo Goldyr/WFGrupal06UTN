@@ -43,6 +43,43 @@ namespace TP6_GRUPO7
             string Precio = ((Label)grd_SelProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_Precio")).Text;
 
             lblProducto.Text = "Producto agregado: " + IdProd + " " + NombreProd + " " + IdProv + " " + Precio + " ";
+
+            if (Session["Productos_seleccionados"] == null)
+            {
+                Session["Productos_seleccionados"] = creartabla();
+            }
+            agregarfila((DataTable)Session["Productos_seleccionados"], IdProd, NombreProd, IdProv, Precio);
+            
+        }
+
+        public DataTable creartabla()
+        {
+            DataTable dt = new DataTable();
+            DataColumn columna = new DataColumn("IdProd", System.Type.GetType("System.String"));
+            dt.Columns.Add(columna);
+
+            columna = new DataColumn("NombreProd", System.Type.GetType("System.String"));
+            dt.Columns.Add(columna);
+
+            columna = new DataColumn("IdProv", System.Type.GetType("System.String"));
+            dt.Columns.Add(columna);
+
+            columna = new DataColumn("Precio", System.Type.GetType("System.String"));
+            dt.Columns.Add(columna);
+
+
+            return dt;
+        }
+
+        public void agregarfila(DataTable dt, string IdProd, string NombreProd, string IdProv, string Precio)
+        {
+            DataRow dr = dt.NewRow();
+            dr["IdProd"] = IdProd;
+            dr["NombreProd"] = NombreProd;
+            dr["IdProv"] = IdProv;
+            dr["Precio"] = Precio;
+            dt.Rows.Add(dr);
+
         }
     }
 }

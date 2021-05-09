@@ -44,11 +44,8 @@ namespace TP6_GRUPO7
 
             lblProducto.Text = "Producto agregado: " + IdProd + " " + NombreProd + " " + IdProv + " " + Precio + " ";
 
-            if (Session["Productos_seleccionados"] == null)
-            {
-                Session["Productos_seleccionados"] = creartabla();
-            }
-            agregarfila((DataTable)Session["Productos_seleccionados"], IdProd, NombreProd, IdProv, Precio);
+            if (Session["Productos_seleccionados"] == null) Session["Productos_seleccionados"] = creartabla();
+            else agregarfila((DataTable)Session["Productos_seleccionados"], IdProd, NombreProd, IdProv, Precio);
             
         }
 
@@ -73,13 +70,29 @@ namespace TP6_GRUPO7
 
         public void agregarfila(DataTable dt, string IdProd, string NombreProd, string IdProv, string Precio)
         {
-            DataRow dr = dt.NewRow();
-            dr["IdProd"] = IdProd;
-            dr["NombreProd"] = NombreProd;
-            dr["IdProv"] = IdProv;
-            dr["Precio"] = Precio;
-            dt.Rows.Add(dr);
+
+            if (!VerificarSiElProductoYaSeSelecciono(dt, IdProd))   // Si encuentra coincidencias con el id de producto no agrego a la tabla
+                                                                    // de seleccion
+            {
+                DataRow dr = dt.NewRow();
+                dr["IdProd"] = IdProd;
+                dr["NombreProd"] = NombreProd;
+                dr["IdProv"] = IdProv;
+                dr["Precio"] = Precio;
+                dt.Rows.Add(dr);
+            }
 
         }
+
+        protected bool VerificarSiElProductoYaSeSelecciono(DataTable tb, string IDProd)
+        {
+            foreach(DataRow dr in tb.Rows)
+            {
+                if (dr["IdProd"].ToString() == IDProd) return true;
+            }
+
+            return false;
+        }
+
     }
 }
